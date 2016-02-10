@@ -21,17 +21,21 @@ def comment():
 			else:
 				m+= int(time[0])
 				s+= int(time[1])
+
+		#print(h , m , s)
 			
 
 		ns = s//60
 		nm = (ns+m)//60
 
 		h+=nm
+		d=h//24
+		nh = nm%24 
 		nm = (m+ns)%60
 		ns = s%60
 
 		#print(time , nh , nm , ns)
-		print(h , "Hours" , nm , "Minutes" , ns , "Seconds")
+		print(d , "Days" , nh , "Hours" , nm , "Minutes" , ns , "Seconds")
 # 			print(time , nh , nm , ns)
 
 
