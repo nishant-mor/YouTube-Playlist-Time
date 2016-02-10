@@ -6,7 +6,7 @@ def comment():
 		url = 'https://www.youtube.com/playlist?list=PLEsfXFp6DpzQFqfCur9CJ4QnKQTVXUsRy'
 		source_code = requests.get(url)   # source code of page
 		plain_text = source_code.text
-		soup = BeautifulSoup(plain_text)
+		soup = BeautifulSoup(plain_text , "html.parser")
 		soup.encode('UTF-8')
 		h , m , s = 0 , 0 , 0;
 
